@@ -1,30 +1,41 @@
-.insider {
-    margin-left: 50%;
+a:link{
+    font-style: italic;
     margin-top: 10%;
-    transition: font-style 4s;
-    transition: font-family 5s;
-    transition: color 6s;
-    color: black;
-
+    font-size: 20px;
 }
-button {
-    width: 20%;
-    margin-left: 43%;
-    margin-top: 5%;
-    font-family: cursive;
-    font-size: large;
-    background-color: rgb(0, 0, 0);
-    border-color: rgb(0, 0, 0);
-    transition: background-color 5s;
-    transition: color 3s;
+a:visited{
+    color: whitesmoke;
+}
+a:hover{
+    color: #ae0000;
+}
+a:active{
+    color: rgb(55, 55, 55);
+}
+table {
+    margin-top: 2%;
+    display: grid;
+    place-items: center;
+}
+body {
+    background-image: url(https://media.istockphoto.com/id/1285254074/pt/foto/sportscar-silhouette-on-black-background.jpg?s=170667a&w=0&k=20&c=SDXSI6AQR0kETiFR1T8ZpWpdUO6B-yH2pekKUc5oIkE=);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.boton {
+    display: grid;
+    place-items: center;
+}
+.insider {
     color: white;
 }
-button:hover {
-    background-color: rgb(53, 54, 53);
-    color: green;
-}
-.insider:hover {
+th{
     font-style: italic;
-    font-family: cursive;
-    color: aqua;
+    color: rgb(55, 55, 55);
+    transition: color 4s;
+    font-size: large;
+}
+th:hover{
+    color: #ae0000;
+    
 }

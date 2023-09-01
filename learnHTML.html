@@ -7,30 +7,25 @@
    </head>
 
    <body>
-      <div id="Div_cervejas">
-        <button id="botaoCarregar">Carregar Cervejas</button>
-      </div> 
-      
-      <div id="resposta">
-         <p id="clicado"></p>
-      </div>
+         <div class="boton">
+            <a href="#" id="botaoCarregar" onclick="carregarDiv">Veículos</a>
+         </div>
+         <div id="meu amor">
+         </div>      
    </body>   
-
+   
    <script>
-      let cervejas = ["Guiness", "Desperados","Becks"]
+      let carros = ["Supra","Nissan 350Z","207","MX-5","Lancer","Skyline","A3","Mustang"]
+      
 
-      function transformar (item) {
-         return `<tr><th>${item}</th></tr>`
-      }
+         const carregarDiv = cervs => {
+            const div = document.getElementById("meu amor")
+            cervs.reverse()
+            const cervejasHtml = cervs.map(item => `<tr><th>${item}</th></tr>`) 
+            div.innerHTML = `<table class="insider">${cervejasHtml.join("\n")}</table>`
+         }
 
-      function carregarDiv(){
-         let div = document.getElementById("resposta");
-         div.classList.toggle("visivel");
-         let cervejasHtml = cervejas.map(transformar)
-         cervejasHtml.reverse();
-         div.innerHTML = `<table class="insider">${cervejasHtml.join("\n")}</table>`
-    }
-      let botao = document.getElementById("botaoCarregar");
-      botao.addEventListener("click",carregarDiv);
+      let botao = document.getElementById("botaoCarregar")
+      botao.addEventListener("click", () => carregarDiv(carros))                 
    </script>
 </html>
