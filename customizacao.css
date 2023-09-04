@@ -1,41 +1,53 @@
-a:link{
-    font-style: italic;
+.efeito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 350px;
+    margin-left: 32%;
+    margin-top: 15px;
+    border-radius: 60px;
+    opacity: 0.6;
+}
+.botao {
     margin-top: 10%;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-a:visited{
-    color: whitesmoke;
+.button {
+    border-radius: 50px;
+    width: 200px;
+    height: 50px;
+    font-family: cursive;
+    font-style: italic;
+    color: black;
+    transition: background-color 5s;
 }
-a:hover{
-    color: #ae0000;
-}
-a:active{
-    color: rgb(55, 55, 55);
+.button:hover {
+    background-color: gold;
 }
 table {
-    margin-top: 2%;
-    display: grid;
-    place-items: center;
+    margin-top: 15px;
+    border-collapse: collapse;
+    width: 300px;
+    height: 200px;
+}
+td,th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: cursive;
+}
+td {
+    text-align: center;
+}
+th {
+    font-style: italic;
 }
 body {
-    background-image: url(https://media.istockphoto.com/id/1285254074/pt/foto/sportscar-silhouette-on-black-background.jpg?s=170667a&w=0&k=20&c=SDXSI6AQR0kETiFR1T8ZpWpdUO6B-yH2pekKUc5oIkE=);
+    background-image: url(https://images.lifestyleasia.com/wp-content/uploads/sites/7/2023/06/06212441/Low-calorie-beers-4-1600x900.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
-}
-.boton {
-    display: grid;
-    place-items: center;
-}
-.insider {
-    color: white;
-}
-th{
-    font-style: italic;
-    color: rgb(55, 55, 55);
-    transition: color 4s;
-    font-size: large;
-}
-th:hover{
-    color: #ae0000;
-    
+    background-size: cover;
+    background-attachment: fixed;
 }
