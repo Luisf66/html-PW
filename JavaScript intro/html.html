@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="PT-br">   
+   <head>
+      <meta charset="UTF-8">      
+      <link href="customizacao.css" rel="stylesheet">
+   </head>
+
+   <body>
+      <div id="Div_cervejas">
+        <button id="botaoCarregar">Carregar Cervejas</button>
+      </div> 
+      
+      <div id="resposta">
+         <p id="clicado"></p>
+      </div>
+   </body>   
+
+   <script>
+      let cervejas = ["Guiness", "Desperados","Becks"]
+
+      function transformar (item) {
+         return `<tr><th>${item}</th></tr>`
+      }
+
+      function carregarDiv(){
+         let div = document.getElementById("resposta");
+         div.classList.toggle("visivel");
+         let cervejasHtml = cervejas.map(transformar)
+         cervejasHtml.reverse();
+         div.innerHTML = `<table class="insider">${cervejasHtml.join("\n")}</table>`
+    }
+      let botao = document.getElementById("botaoCarregar");
+      botao.addEventListener("click",carregarDiv);
+   </script>
+</html>
