@@ -1,0 +1,30 @@
+.insider {
+    margin-left: 50%;
+    margin-top: 10%;
+    transition: font-style 4s;
+    transition: font-family 5s;
+    transition: color 6s;
+    color: black;
+
+}
+button {
+    width: 20%;
+    margin-left: 43%;
+    margin-top: 5%;
+    font-family: cursive;
+    font-size: large;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    transition: background-color 5s;
+    transition: color 3s;
+    color: white;
+}
+button:hover {
+    background-color: rgb(53, 54, 53);
+    color: green;
+}
+.insider:hover {
+    font-style: italic;
+    font-family: cursive;
+    color: aqua;
+}
