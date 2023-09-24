@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 
-<html>
+<html>   
+   <head>
+      <meta charset="UTF-8">  
+      <link rel="stylesheet" href="customizacao.css">    
+   </head>
 
-<head>
-   <title>ReactZero</title>
-</head>
+   <body>
+      <div class="space"></div>
+      <div id="button">
+         <button id="botaoCarregar">Verificar Endereços</button>
+      </div>
+      <div class="space"></div>
+      <div id="efeito_back">
+         <div id="cervejasDiv"></div>
+      </div>            
+   </body>   
 
-<body>
-   <div id="app"></div>
-
-   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-   <script>
-      ReactDOM.render(
-         React.createElement(
-            'table',
-            { id: 'my-heading' },
-            React.createElement('tr',null,
-               React.createElement('th', null, 'Coluna 1'),
-               React.createElement('th', null, 'Coluna 2'),
-               React.createElement('th', null, 'Coluna 3'),
-            ),
-            React.createElement('tr', null,
-               React.createElement('td', null, 'Linha 1'),
-               React.createElement('td', null, 'Linha 2'),
-               React.createElement('td', null, 'Linha 3'),
-            )),
-         document.getElementById('app')
-      );
-   </script>
-
-</body>
-
+   <script src="JavaScript.js"></script>
 </html>
