@@ -1,0 +1,29 @@
+p.verso {
+    color: blue;
+}
+p.mote {
+    color: red;
+}
+a:visited {
+    color: red;
+}
+a:hover {
+    color: green;
+}
+a:active {
+    color: blue;
+}
+img {
+    border-radius: 20px;
+}
+div.poeta {
+    border-radius: 20px;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    background-color: yellow;
+    color: black;
+}
