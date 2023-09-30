@@ -28,4 +28,3 @@ function montarListaDeCervejas(cervejas) {
  
  let botao = document.getElementById("botaoCarregar");
  botao.addEventListener("click", () => carregarCervejas());
- 

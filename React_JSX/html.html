@@ -11,24 +11,34 @@
 
    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+   <script src="libs/babel.js"></script>
+
+
 
    <script>
+      function TabelaBebidas () 
+      {
+         return (
+            <div id="app">
+            <table id="tabela" border="1">
+               <thead>
+                  <tr><th>Nome</th><th>Marca</th></tr>
+               </thead>
+               <tbody>
+               <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+               </tbody>
+            </table>
+         </div>
+         );
+      }
+   </script>
+
+   <script type="text/babel">
       ReactDOM.render(
-         React.createElement(
-            'table',
-            { id: 'my-heading' },
-            React.createElement('tr',null,
-               React.createElement('th', null, 'Coluna 1'),
-               React.createElement('th', null, 'Coluna 2'),
-               React.createElement('th', null, 'Coluna 3'),
-            ),
-            React.createElement('tr', null,
-               React.createElement('td', null, 'Linha 1'),
-               React.createElement('td', null, 'Linha 2'),
-               React.createElement('td', null, 'Linha 3'),
-            )),
-         document.getElementById('app')
-      );
+         TabelaBebidas()
+         ,
+         document.getElementById("app"))
+
    </script>
 
 </body>
