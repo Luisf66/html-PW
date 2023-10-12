@@ -1,44 +1,105 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-   <title>ReactZero</title>
+   <title>React Um</title>
+   <link href="customizacao.css" rel="stylesheet">
 </head>
 
 <body>
-   <div id="app"></div>
+   <div id="Titulo"></div>
 
-   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+   <div id="BotaoDiv">
+      <button id="botao" onclick="ToggleTabela()">Acessar Tabela</button>
+   </div>
+
+   <div id="TabelaDiv"></div>
+
+   <script src="libs/react.js"></script>
+   <script src="libs/react-dom.js"></script>
    <script src="libs/babel.js"></script>
 
+   <script type="text/babel">
+      // visibilidade da tabela 
+      let tablevisible = false;
 
+      function ToggleTabela() {
+         tablevisible = !tablevisible;
+         renderTable();
+      }
+      //Vetor JSON de cervejas
+      let cervejas = [
+         {
+            name: "Guiness",
+            alcohol: "10%",
+            style: "Imperial Stout",
+            ibu: "33"
 
-   <script>
-      function TabelaBebidas () 
-      {
+         },
+         {
+            name: "Desperados",
+            alcohol: "6%",
+            style: "English IPA",
+            ibu: "28"
+         },
+         {
+            name: "Becks",
+            alcohol: "5%",
+            style: "Red Ale",
+            ibu: "57"
+         }
+      ]
+      //Função para gerar o titulo
+      function Titulo_da_tabela() {
          return (
-            <div id="app">
-            <table id="tabela" border="1">
-               <thead>
-                  <tr><th>Nome</th><th>Marca</th></tr>
-               </thead>
-               <tbody>
-               <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-               </tbody>
-            </table>
-         </div>
+            <div id="Titulo">
+               <h1>Minha tabela de bebidas</h1>
+            </div>
+         )
+      }
+      //Função para gerar a tabela
+      function TabelaBebidas() {
+         return (
+            <div id="TabelaDiv">
+               <table id="tabela" border="1">
+                  <thead>
+                     <tr>
+                        <th>Nome</th>
+                        <th>Alcool</th>
+                        <th>Estilo</th>
+                        <th>IBU</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {cervejas.map((cervejas, index) => (
+                        <tr key={index}>
+                           <td>{cervejas.name}</td>
+                           <td>{cervejas.alcohol}</td>
+                           <td>{cervejas.style}</td>
+                           <td>{cervejas.ibu}</td>
+                        </tr>
+                     ))}
+                  </tbody>
+               </table>
+            </div>
          );
       }
-   </script>
 
-   <script type="text/babel">
       ReactDOM.render(
-         TabelaBebidas()
-         ,
-         document.getElementById("app"))
-
+         <Titulo_da_tabela />,
+         document.getElementById("Titulo")
+      );
+      function renderTable() {
+         if (tablevisible == true) {
+            ReactDOM.render(
+               <TabelaBebidas />,
+               document.getElementById("TabelaDiv")
+            );
+         }
+         else {
+            ReactDOM.unmountComponentAtNode(document.getElementById("TabelaDiv"));
+         }
+      }
    </script>
 
 </body>

@@ -1,0 +1,49 @@
+#Titulo {
+    margin-top: 30px;
+    display: grid;
+    place-items: center;
+    font-style: italic;
+}
+
+#BotaoDiv {
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+}
+
+#TabelaDiv {
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+    height: 200px;
+
+}
+
+#botao {
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+#tabela {
+    width: 500px;
+    height: 150px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+tr,td,th {
+    text-align: center;
+    border: 2px solid black;
+    transition: .8s;
+}
+
+#th,tr:hover > :not(:hover) {
+    background-color: white;
+}
+
+body {
+    background-color: rgba(30, 45, 58, 0.607);
+}
